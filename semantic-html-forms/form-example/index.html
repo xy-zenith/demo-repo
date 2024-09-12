@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Forms</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" type="image/png" href="images/icon.svg">
+    
+</head>
+
+<body>
+    <div class="container">
+ 
+        <form method="GET" action="/preferences">
+            <label for="fname">First name:</label><br>
+            <input min-length=3  type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+        
+            <fieldset>
+                <legend>favorite text editor</legend>
+                <input type="radio" id="vscode" name="fav_editor" value="vscode">
+                <label for="vscode">VSCode</label><br>
+                <input type="radio" id="vim" name="fav_editor" value="vim">
+                <label for="vim">Vim</label><br>
+                <input type="radio" id="emacs" name="fav_editor" value="emacs">
+                <label for="emacs">Emacs</label>
+            </fieldset>
+            <input type="submit"/>
+        </form>
+        
+    </div>
+  
+</body>
+
+</html>
