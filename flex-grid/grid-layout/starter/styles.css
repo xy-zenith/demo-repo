@@ -1,0 +1,26 @@
+.grid-container {
+}
+  
+.grid-item {
+    background: tomato;
+    padding: 5px;
+    line-height: 125px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.more{
+  display: none;
+}
+
+#one {
+}
+
+#two {
+}
+
+#three {
+}
