@@ -89,9 +89,10 @@ footer {
     height: 130px;
     width: 100px;
 }
-.cats {
+.cat-article {
     margin: 20px 0px;
     img {
-    width: 200px; 
+        width: 200px; 
     }
+    border: 1px solid;
 }
