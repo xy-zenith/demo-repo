@@ -20,13 +20,16 @@
 
 
     <div class="container">
-
-        <article class="cats">
-            <div>Name: name</div>
-            <div>Color: color</div>
-            <div>Human: human</div>
+        <!-- <%= cats %> -->
+        <% for(let cat of cats) { %>
+        <article class="cat-article">
+            <div>Name: <%= cat.name %></div>
+            <div>Color: <%= cat.color %></div>
+            <div>Human: <%= cat.human %></div>
+            <img src = "<%= cat.image %>"/>
             <img/>
         </article>
+        <% } %>
     </div>
     <footer>
         <span id="contact">© Famous Cats Inc 2024</span>

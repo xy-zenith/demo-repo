@@ -18,3 +18,5 @@ const cats = [
         image: "images/hobbes.png"
     },
 ];
+
+export { cats };
