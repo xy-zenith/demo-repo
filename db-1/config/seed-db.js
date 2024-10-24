@@ -4,6 +4,7 @@ const dropTables = async () => {
     try {
         console.log('dropping tables...');
         const dropTablesQuery = `
+            DROP TABLE IF EXISTS cats;
         `;
         await pool.query(dropTablesQuery);
     } catch (error) {
@@ -15,8 +16,12 @@ const createTables = async () => {
     try {
         console.log('creating cats...');
         const createQuery = `
-
-            );
+            CREATE TABLE IF NOT EXISTS cats (
+            id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+            name TEXT NOT NULL,
+            color TEXT NOT NULL,
+            human TEXT NOT NULL,
+            image TEXT);
         `;
         await pool.query(createQuery);
         console.log('created cats');
@@ -30,8 +35,10 @@ const insertData = async () => {
     try {
         console.log('adding initial data...');
         const insertQuery = `
-
-            
+            INSERT INTO cats (name, color, human, image)
+            VALUES ('Jiji', 'black', 'Kiki', '/images/jiji.png'),
+            ('Lion', 'pink', 'Steven', '/images/lion.png'),
+            ('Hobbes', 'orange and black', 'Calvin', '/images/hobbes.png');
         `;
         await pool.query(insertQuery);
     } catch (error) {
