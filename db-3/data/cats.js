@@ -55,4 +55,17 @@ const deleteCat = async (id) => {
     }
 };
 
+const getToysForCat = async(cat_id) =>
+{
+    try 
+    {
+        const results = await pool.query('SELECT toys.name FROM toys WHERE cat_id = $1;', [cat_id])
+        return results.rows;
+    }
+    catch(error)
+    {
+        console.error(error.message)
+    }
+};
+
 export {getCats, getCat, getToysForCat, createCat, updateCat, deleteCat};
