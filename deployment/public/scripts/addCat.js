@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.getElementById('name').value;
         const color = document.getElementById('color').value;
         const human = document.getElementById('human').value;
-        const image = document.getElementById('image-url').value;
+        const photo = document.getElementById('image-url').value;
        
         fetch('/api/cats', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, color, human, image}),
+            body: JSON.stringify({ name, color, human, photo}),
         })
         .then(response => {
             return response.json();
